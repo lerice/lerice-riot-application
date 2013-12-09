@@ -1,0 +1,55 @@
+/* This file contains the global page styles for headers footers and menus */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 980px;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+#first {
+	background: url(../images/firstBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 600px;
+	margin: 0;
+	padding: 0;
+}
+
+#second {
+	background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+#third {
+	background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 990px;
+	padding: 100px 0 0 0;	
+}
+
+.divider {
+	min-height: 300px;
+	background: white;
+}
+
+.info {
+	margin: 0 auto;
+	min-width: 980px;
+	width: 980px;
+}
+
+/* formating link hover colours */
+
+a:link, a:visited {
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #990000;
+}
