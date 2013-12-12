@@ -101,6 +101,12 @@ body {
 	min-height: 300px;
 }
 
+#opportunity {
+	margin-top: -200px;
+	height: 200px;
+	background: none;
+}
+
 /* formating link hover colours */
 
 a:link, a:visited {
