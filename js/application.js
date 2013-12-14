@@ -5,6 +5,7 @@ $(function () {
 	$('#fourth').parallax("50%", 0.3);
 	$('#fifth').parallax("50%", 0.3);
 	$('#sixth').parallax("50%", 0.3);
+	$('#allstar').parallax("50%", 0.3);
 	
 	$('#next').localScroll(5000);
 });

@@ -13,8 +13,15 @@ body {
 	background: url(../images/scroll_top.jpg) 50% 0 no-repeat;
 	color: white;
 	height: 100%;
+	min-height: 400px;
 	margin: 0;
 	padding: 0;
+	position: relative;
+}
+
+#nextdiv {
+	position: absolute;
+	bottom: 0;
 }
 
 #second {
@@ -28,7 +35,7 @@ body {
 }
 
 #third {
-	background: url(../images/alliance_wins.jpg) no-repeat fixed;
+	background: url(../images/alliance_trophy.jpg) no-repeat fixed;
 	background-size: cover;
 	color: white;
 	height: 700px;
@@ -67,6 +74,16 @@ body {
 	padding: 0;
 }
 
+#allstar {
+	background: url(../images/korea_allstars.jpg) no-repeat fixed;
+	background-size: cover;
+	color: white;
+	height: 700px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
 #final {
 	background: url(../images/scroll_bottom.jpg) 50% 0 no-repeat;
 	color: white;
@@ -74,8 +91,16 @@ body {
 	padding: 0px 0 0 0;	
 }
 
+#footer {
+	margin-top: -55px;
+	height: 35px;
+	color: #999999;
+	text-align: center;
+	font-size: 11px;
+}
+
 .divider {
-	min-height: 500px;
+	min-height: 600px;
 	background: url(../images/scroll_middle.jpg) 50% 0;
 	z-index: 1000;
 	border-top: 1px solid;
@@ -89,9 +114,12 @@ body {
 }
 
 #dearriot {
-	padding-top: 400px;
+	padding-top: 300px;
 	padding-left: 300px;
 	margin: 0;
+	font-family: Billabong,Tahoma,Verdana,Segoe,sans-serif;
+	font-size: 42px;
+	font-weight: 400;
 }
 
 #thankyou {
@@ -99,6 +127,13 @@ body {
 	background-size: auto 100%;
 	height: 100%;
 	min-height: 300px;
+	position: relative;
+}
+
+#thankyoutext {
+	position: absolute;
+	bottom: 50px;
+	left: 60%;
 }
 
 #opportunity {
@@ -107,13 +142,19 @@ body {
 	background: none;
 }
 
+.caption {
+	margin-top: 650px;
+	text-align: center;
+}
+
 /* formating link hover colours */
 
 a:link, a:visited {
-	color: #333333;
+	color: #3399FF;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #990000;
+	color: #FFFFFF;
+	text-decoration: none;
 }
