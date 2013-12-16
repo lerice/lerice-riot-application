@@ -1,11 +1,10 @@
 $(function () {
-	//$('#first').parallax("50%", 0.3);
-	$('#second').parallax("50%", 0.3);
-	$('#third').parallax("50%", 0.3);
-	$('#fourth').parallax("50%", 0.3);
-	$('#fifth').parallax("50%", 0.3);
-	$('#sixth').parallax("50%", 0.3);
-	$('#allstar').parallax("50%", 0.3);
+	$('#back1').parallax("50%", 0.3);
+	$('#back2').parallax("50%", 0.3);
+	$('#back3').parallax("50%", 0.3);
+	$('#back4').parallax("50%", 0.3);
+	$('#back5').parallax("50%", 0.3);
+	$('#back6').parallax("50%", 0.3);
 	
 	$('#next').localScroll(5000);
 });
