@@ -4,16 +4,17 @@ body {
 	padding: 0;
 	min-width: 800px;
 	font-family: Arial;
-	font-size: 12px;
+	font-size: 15px;
 	height: 100%;
 }
 
 /* CSS for background images - to make parallax scrolling work */
 
 .backgroundscroll {
-	color: #CCCCCC;
+	color: #FFFFFF;
 	height: 700px;
 	overflow: hidden;
+	font-size: 12px;
 }
 
 #back1 {
@@ -52,47 +53,21 @@ body {
 }
 
 .caption a:link, .caption  a:visited {
-	color: #00FF00;
+	color: #66FF66;
 	text-decoration: none;
 }
 
 .caption  a:hover {
-	color: #CCCCCC;
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
 /* CSS for content slides */
 
-#first {
-	background: url(../images/scroll_top.jpg) 50% 0 no-repeat;
-	color: white;
-	height: 100%;
-	min-height: 700px;
-	position: relative;
-}
-
-#nextdiv {
-	position: absolute;
-	bottom: 0;
-}
-
-#final {
-	background: url(../images/scroll_bottom.jpg) 50% 0 no-repeat;
-	color: white;
-	height: 500px;
-}
-
-#footer {
-	margin-top: -55px;
-	height: 35px;
-	color: #999999;
-	text-align: center;
-	font-size: 11px;
-}
-
-.divider {
+.slide {
 	min-height: 600px;
 	background: url(../images/scroll_middle.jpg) 50% 0 no-repeat;
+	position: relative;
 }
 
 .info {
@@ -101,11 +76,44 @@ body {
 	width: 800px;
 }
 
-#dearriot {
+h1 {
 	margin: 0;
-	padding-top: 250px;
 	font-family: 'Oleo Script Swash Caps', cursive;
 	font-size: 42px;
+	text-align: right;
+}
+
+.redletter {
+	color: #FF3366;
+}
+
+.nextdiv {
+	position: absolute;
+	left: 48%;
+	bottom: 10px;
+	height: 50px;
+	width: 50px;
+}
+
+.anchor {
+	margin-top: -200px;
+	height: 200px;
+	background: none;
+}
+
+/* CSS for the initial slide */
+
+#firstslide {
+	background: url(../images/scroll_top.jpg) 50% 0 no-repeat;
+	color: white;
+	height: 100%;
+	min-height: 700px;
+	position: relative;
+}
+
+#dearriot {
+	padding-top: 250px;
+	text-align: left;
 }
 
 #speciald {
@@ -113,8 +121,29 @@ body {
 	font-size: 90px;
 }
 
-.redletter {
-	color: #FF3366;
+#firstnextdiv {
+	bottom: 20%;
+}
+
+/* CSS for the final slide(s) */
+
+#finalslide {
+	background: url(../images/scroll_bottom.jpg) 50% 0 no-repeat;
+	color: white;
+	height: 500px;
+	position: relative;
+}
+
+#finalnextdiv {
+	bottom: 250px;
+}
+
+#footer {
+	margin-top: -55px;
+	height: 35px;
+	color: #999999;
+	text-align: center;
+	font-size: 11px;
 }
 
 #thankyou {
@@ -129,12 +158,6 @@ body {
 	position: absolute;
 	bottom: 50px;
 	left: 60%;
-}
-
-#opportunity {
-	margin-top: -200px;
-	height: 200px;
-	background: none;
 }
 
 /* formating link hover colours */

@@ -6,5 +6,5 @@ $(function () {
 	$('#back5').parallax("50%", 0.3);
 	$('#back6').parallax("50%", 0.3);
 	
-	$('#next').localScroll(5000);
+	$('.nextdiv').localScroll(5000);
 });
