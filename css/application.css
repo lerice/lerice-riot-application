@@ -223,6 +223,16 @@ h1 {
 	bottom: 20%;
 }
 
+#disclaimer {
+	position: absolute;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	font-size: 11px;
+	color: #A8A8A8;
+	top: 60px;
+}
+
 /* CSS for the final slide(s) */
 
 #finalslide {
