@@ -43,30 +43,23 @@
 			I've been an active player ever since the start of season 1, with so many great memories from my first pentakill with Master Yi to playing countless hours of ranked 5's
 			throughout the night, to my personal greatest achievement, reaching Diamond earliar last year. Me and my close group of friends were so dedicated and enjoyed the game so
 			much as to even having a brief stint in a sponspored team (although that didn't last long), as well as placing top 16 in the <a href ="http://riot2013.aclpro.com.au/" target="_blank">Oceanic Season 3 online tournament</a>. We were
-			literally 2 <a href="javascript:void(0)" onclick="imagePopUpWins()">wins</a> away from competing at PAX Melbourne but ended up being blown away by our opposition.<br/><br/>
+			literally 2 <a href="javascript:void(0)" onclick="puiWins()">wins</a> away from competing at PAX Melbourne but ended up being blown away by our opposition.<br/><br/>
 			
-			I achieved gold in Season 1 and 2 (forever flaunting my <a href="javascript:void(0)" onclick="imagePopUpGoldS1()">gold season 1 summoner icon</a>!), and finally broke into platinum near the start of Season 3 after being stuck at
+			I achieved gold in Season 1 and 2 (forever flaunting my <a href="javascript:void(0)" onclick="puiGoldS1()">gold season 1 summoner icon</a>!), and finally broke into platinum near the start of Season 3 after being stuck at
 			1800 elo for a rough period. Following the brand new opening of Oceanic servers in 2013, I was able to climb through the (arguably easier) competition and achieve 
 			Diamond during late Season 3. Although I may have slowed down my playing pace as of recently (as time allows me), I am nearing ever so closely to my 1000th normal game 
 			victory, a statistic that I may not take the most pride but belongs to me.<br/><br/>
 			
 			Please take a look at some of the highlights of my league experience (too cheesey to call it a career xD):</p>
-			<a href="javascript:void(0)" onclick="imagePopUpPlat()"><img class="leaguepics" src="images/platinum.jpg" alt="Achieving Diamond"/></a>
-			<a href="javascript:void(0)" onclick="imagePopUpSinged()"><img class="leaguepics" src="images/singed_stats.jpg" alt="Achieving Diamond"/></a>
-			<a href="javascript:void(0)" onclick="imagePopUpDiamond()"><img class="leaguepics" src="images/diamond.jpg" alt="Achieving Diamond"/></a>
-			<a href="javascript:void(0)" onclick="imagePopUpBracket()"><img class="leaguepics" src="images/bracket.jpg" alt="Achieving Diamond"/></a>
-			<a href="javascript:void(0)" onclick="imagePopUpShirt()"><img class="leaguepics" src="images/teamshirt.jpg" alt="Achieving Diamond"/></a>
+			<a href="javascript:void(0)" onclick="puiPlat()"><img class="leaguepics" src="images/thumb_platinum.jpg" alt="Achieving Diamond"/></a>
+			<a href="javascript:void(0)" onclick="puiSinged()"><img class="leaguepics" src="images/thumb_singed_stats.jpg" alt="Achieving Diamond"/></a>
+			<a href="javascript:void(0)" onclick="puiDiamond()"><img class="leaguepics" src="images/thumb_diamond.jpg" alt="Achieving Diamond"/></a>
+			<a href="javascript:void(0)" onclick="puiBracket()"><img class="leaguepics" src="images/thumb_bracket.jpg" alt="Achieving Diamond"/></a>
+			<a href="javascript:void(0)" onclick="puiShirt()"><img class="leaguepics" src="images/thumb_teamshirt.jpg" alt="Achieving Diamond"/></a>
 			<div class="nextdiv">
 				<a href="#my-passion" title="next slide" class="downimg"></a>
 			</div>
 		</div>
-	</div>
-	
-	<div id="fade"></div>
-	<div id="content">
-		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
-		<div id="bigimagediv"><img id="bigimage" src="" alt="Empty Picture"/></div>
-		<p id="imagecaption"></p>
 	</div>
 	
 	<div id="back2" class="backgroundscroll">
@@ -159,5 +152,55 @@
 		<img src="images/thankyou.png" id="thankyoutext" alt="Thank You"/>
 	</div>
 
+	<div id="resizetab">
+		<p id="resizepara">Each time you resize your browser window, kittens die. Please think of the kittens (or <a href="javascript:location.reload();">refresh</a> to fix the page). 
+		<a href="javascript:void(0)" onclick="hideResize()">Hide</a></p>
+	</div>
+	
+	<!-- 'Invisible' pop-up images go last, to load the images after the page has finished -->
+	<div id="fade"></div>
+	
+	<div id="PUIwins" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/trident_vs_interstellar.jpg" alt="Trident VS Interstellar score screen"/></div>
+		<p class="imagecaption">A screenshot of one of my teams best victories (dat KDA) against another Australian team in a local tournament.</p>
+	</div>
+	
+	<div id="PUIgolds1" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/golds1.jpg" alt="Gold in Season 1"/></div>
+		<p class="imagecaption">My beautiful profile page, diamond border and gold season 1 summoner icon :D</p>
+	</div>
+	
+	<div id="PUIplat" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/platinum.jpg" alt="Achieving Platinum"/></div>
+		<p class="imagecaption">2-0 up in my promotion series to Platinum in early Season 3. I won the next game to win the series :D</p>
+	</div>
+	
+	<div id="PUIsinged" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/singed_stats.jpg" alt="My Singed Stats Season 2"/></div>
+		<p class="imagecaption">My self-proclaimed godly Singed stats, the champion whom has carried me through countless Solo Queue games.</p>
+	</div>
+	
+	<div id="PUIdiamond" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/diamond.jpg" alt="Achieving Diamond"/></div>
+		<p class="imagecaption">The all-gratifying cinematic when promoting to Diamond. My all time most memorable League moment.</p>
+	</div>
+	
+	<div id="PUIbracket" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/bracket.jpg" alt="Riot Oceanic S3 Tournament Bracket"/></div>
+		<p class="imagecaption">My team's (Team Down Under) bracket that we crushed through to reach top 16 in the Oceanic Season 3 Championship.</p>
+	</div>
+	
+	<div id="PUIshirt" class="content">
+		<a href="javascript:void(0)" onclick="closePopUp()" title="Close" class="closeimg"></a>
+		<div class="bigimagediv"><img class="bigimage" src="images/teamshirt.jpg" alt="its me!"/></div>
+		<p class="imagecaption">A sneaky photo of me playing in a tournament :x</p>
+	</div>
+	
 </body>
 </html>

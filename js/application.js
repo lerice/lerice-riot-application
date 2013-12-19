@@ -1,3 +1,4 @@
+/* The function to be called on successful body load */
 $(function () {
 	$('#back1').parallax("50%", 0.3);
 	$('#back2').parallax("50%", 0.3);
@@ -7,67 +8,124 @@ $(function () {
 	$('#back6').parallax("50%", 0.3);
 	
 	$('.nextdiv').localScroll(5000);
+	
+	$('.bigimage').css("max-height", $(window).height() * 0.75);
+	
+	//Set negative margin-left and margin-right's for the image pop ups - relative to window size
+	$('#PUIwins').css("margin-left", $('#PUIwins').width() * -0.5);
+	$('#PUIwins').css("margin-top", $('#PUIwins').height() * -0.5);
+	$('#PUIgolds1').css("margin-left", $('#PUIgolds1').width() * -0.5);
+	$('#PUIgolds1').css("margin-top", $('#PUIgolds1').height() * -0.5);
+	$('#PUIplat').css("margin-left", $('#PUIplat').width() * -0.5);
+	$('#PUIplat').css("margin-top", $('#PUIplat').height() * -0.5);
+	$('#PUIsinged').css("margin-left", $('#PUIsinged').width() * -0.5);
+	$('#PUIsinged').css("margin-top", $('#PUIsinged').height() * -0.5);
+	$('#PUIdiamond').css("margin-left", $('#PUIdiamond').width() * -0.5);
+	$('#PUIdiamond').css("margin-top", $('#PUIdiamond').height() * -0.5);
+	$('#PUIbracket').css("margin-left", $('#PUIbracket').width() * -0.5);
+	$('#PUIbracket').css("margin-top", $('#PUIbracket').height() * -0.5);
+	$('#PUIshirt').css("margin-left", $('#PUIshirt').width() * -0.5);
+	$('#PUIshirt').css("margin-top", $('#PUIshirt').height() * -0.5);
+	
+	//Set the alert for when a user tries to resize their window!
+	//Please don't harm the kittens :(
+	$(window).resize(function() {
+		$('#resizetab').css("opacity", "1");
+		$('#resizetab').css("height", "30px");
+	});
 });
 
-function imagePopUp() {
-	$('body').addClass('stop-scrolling')
-	$('#content').css("margin-left", $('#content').width() * -0.5);
-	$('#content').css("margin-top", $('#content').height() * -0.5);
-	$('#fade').css("display", "block");
-	$('#content').css("display", "block");
+function hideResize() {
+	$('#resizetab').css("opacity", "0");
+	$('#resizetab').css("height", "0");
+}
+
+/* Self-produced jQuery and CSS for image pop ups. NO PLUG IN USED! */
+function showPopUp() {
+	$('#fade').css("opacity", "0.8");
+	$('#fade').css("height", "100%");
+	disable_scroll();
 }
 
 function closePopUp() {
-	$('#fade').css("display", "none");
-	$('#content').css("display", "none");
-	$('body').removeClass('stop-scrolling')
+	$('#fade').css("opacity", "0");
+	$('#fade').css("height", "0");
+	$('.content').css("display", "none");
+	enable_scroll();
 }
 
-function imagePopUpWins() {
-	$('#imagecaption').html("A screenshot of one of my teams best victories (dat KDA) against another Australian team in a local tournament.");
-	$('#bigimage').attr("src", "images/trident_vs_interstellar.jpg");
-	$('#bigimage').attr("alt", "Trident VS Interstellar score screen");
-	imagePopUp();
+function puiWins() {
+	showPopUp();
+	$('#PUIwins').css("display", "block");
 }
 
-function imagePopUpGoldS1() {
-	$('#imagecaption').html("My beautiful profile page, diamond border and gold season 1 summoner icon :D");
-	$('#bigimage').attr("src", "images/golds1.jpg");
-	$('#bigimage').attr("alt", "Gold in Season 1");
-	imagePopUp();
+function puiGoldS1() {
+	showPopUp();
+	$('#PUIgolds1').css("display", "block");
 }
 
-function imagePopUpPlat() {
-	$('#imagecaption').html("2-0 up in my promotion series to Platinum in early Season 3. I won the next game to win the series :D");
-	$('#bigimage').attr("src", "images/platinum.jpg");
-	$('#bigimage').attr("alt", "Achieving Platinum");
-	imagePopUp();
+function puiPlat() {
+	showPopUp();
+	$('#PUIplat').css("display", "block");
 }
 
-function imagePopUpSinged() {
-	$('#imagecaption').html("My self-proclaimed godly Singed stats, the champion whom has carried me through countless Solo Queue games. (R.I.P AP Singed)");
-	$('#bigimage').attr("src", "images/singed_stats.jpg");
-	$('#bigimage').attr("alt", "Singed Stats Season 2");
-	imagePopUp();
+function puiSinged() {
+	showPopUp();
+	$('#PUIsinged').css("display", "block");
 }
 
-function imagePopUpDiamond() {
-	$('#imagecaption').html("The all-gratifying cinematic when promoting to Diamond. My all time most memorable League moment.");
-	$('#bigimage').attr("src", "images/diamond.jpg");
-	$('#bigimage').attr("alt", "Achieving Diamond");
-	imagePopUp();
+function puiDiamond() {
+	showPopUp();
+	$('#PUIdiamond').css("display", "block");
 }
 
-function imagePopUpBracket() {
-	$('#imagecaption').html("My team's (Team Down Under) bracket that we crushed through to reach top 16 in the Oceanic Season 3 Championship.");
-	$('#bigimage').attr("src", "images/bracket.jpg");
-	$('#bigimage').attr("alt", "Riot Oceanic S3 Tournament Bracket");
-	imagePopUp();
+function puiBracket() {
+	showPopUp();
+	$('#PUIbracket').css("display", "block");
 }
 
-function imagePopUpShirt() {
-	$('#imagecaption').html("A sneaky photo of me playing in a tournament :x");
-	$('#bigimage').attr("src", "images/teamshirt.jpg");
-	$('#bigimage').attr("alt", "its me!");
-	imagePopUp();
+function puiShirt() {
+	showPopUp();
+	$('#PUIshirt').css("display", "block");
+}
+
+/* Code to disable scrolling (useful when having CSS image-pop ups
+    - WITHOUT removing the scrollbar from the visible window (ie by
+	setting overflow:hidden on body -
+   Taken from http://jsbin.com/disable-scrolling/1                 */
+var keys = [37, 38, 39, 40];
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function keydown(e) {
+    for (var i = keys.length; i--;) {
+        if (e.keyCode === keys[i]) {
+            preventDefault(e);
+            return;
+        }
+    }
+}
+
+function wheel(e) {
+  preventDefault(e);
+}
+
+function disable_scroll() {
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+  document.onkeydown = keydown;
+}
+
+function enable_scroll() {
+    if (window.removeEventListener) {
+        window.removeEventListener('DOMMouseScroll', wheel, false);
+    }
+    window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
 }
