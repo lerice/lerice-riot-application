@@ -13,13 +13,51 @@ $(function () {
 	
 	//Set the slider for 'my abilities' page
 	$('#sliderdiv').bjqs({
-		animtype : 'slide',
-		height : 420,
-		width : 800,
+		//size of slider
+		width: 800,
+		height: 420,
 		
-		usecaptions: false
+		//animaiton values
+		animtype: 'slide',
+		animduration: 1000,
+		automatic: false,
+		
+		//control and marker configuration
+		showcontrols: true,
+		centercontrols: true,
+		nexttext: '>',
+		prevtext: '<',
+		showmarkers: true,
+		centermarkers: true,
+		
+		//interaction values
+		keyboardnav: true,
+		hoverpause: true,
+		
+		//presentational options
+		usecaptions: false,
+		randomstart: false,
+		responsive: true
 	});
 	
+	recalcWindowSize();
+	
+	//Set the alert for when a user tries to resize their window!
+	//Please don't harm the kittens :(
+	$(window).resize(function() {
+		$('#resizetab').css("opacity", "1");
+		$('#resizetab').css("height", "30px");
+		recalcWindowSize();
+	});
+});
+
+function hideResize() {
+	$('#resizetab').css("opacity", "0");
+	$('#resizetab').css("height", "0");
+}
+
+function recalcWindowSize() {
+	//set the pop up image to a maximum height - avoid covering the screen
 	$('.bigimage').css("max-height", $(window).height() * 0.75);
 	
 	//Set negative margin-left and margin-right's for the image pop ups - relative to window size
@@ -37,18 +75,6 @@ $(function () {
 	$('#PUIbracket').css("margin-top", $('#PUIbracket').height() * -0.5);
 	$('#PUIshirt').css("margin-left", $('#PUIshirt').width() * -0.5);
 	$('#PUIshirt').css("margin-top", $('#PUIshirt').height() * -0.5);
-	
-	//Set the alert for when a user tries to resize their window!
-	//Please don't harm the kittens :(
-	$(window).resize(function() {
-		$('#resizetab').css("opacity", "1");
-		$('#resizetab').css("height", "30px");
-	});
-});
-
-function hideResize() {
-	$('#resizetab').css("opacity", "0");
-	$('#resizetab').css("height", "0");
 }
 
 /* Self-produced jQuery and CSS for image pop ups. NO PLUG IN USED! */
