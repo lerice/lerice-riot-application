@@ -91,7 +91,8 @@ h1 {
 
 .nextdiv {
 	position: absolute;
-	left: 48%;
+	left: 50%;
+	margin-left: -25px;
 	bottom: 10px;
 }
 
@@ -231,6 +232,12 @@ h1 {
 	font-size: 11px;
 	color: #A8A8A8;
 	top: 60px;
+}
+
+/* CSS for the slider page */
+
+.sliderpage {
+	background: #999999;
 }
 
 /* CSS for the final slide(s) */

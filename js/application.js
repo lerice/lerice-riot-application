@@ -1,5 +1,6 @@
 /* The function to be called on successful body load */
 $(function () {
+	//Set the parallax scrolling on the dividing background images
 	$('#back1').parallax("50%", 0.3);
 	$('#back2').parallax("50%", 0.3);
 	$('#back3').parallax("50%", 0.3);
@@ -7,7 +8,17 @@ $(function () {
 	$('#back5').parallax("50%", 0.3);
 	$('#back6').parallax("50%", 0.3);
 	
+	//Set the smooth scrolling between pages
 	$('.nextdiv').localScroll(5000);
+	
+	//Set the slider for 'my abilities' page
+	$('#sliderdiv').bjqs({
+		animtype : 'slide',
+		height : 420,
+		width : 800,
+		
+		usecaptions: false
+	});
 	
 	$('.bigimage').css("max-height", $(window).height() * 0.75);
 	
