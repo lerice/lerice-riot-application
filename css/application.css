@@ -162,6 +162,7 @@ h1 {
 
 .bigimagediv {
 	overflow: auto;
+	text-align: center;
 }
 
 .bigimage {
@@ -281,12 +282,15 @@ h1 {
 #resizetab {
 	position: fixed;
 	width: 650px;
-	height: 0; /* Height will be set to 30px by jQuery */
+	height: 30px;
 	opacity: 0; /* Opacity will be set to 1 by jQuery */
-	bottom: 0;
-	left: 50%;
+	bottom: -1px;
+	left: 200%; /* Left position will be set to 50% by jQuery */
 	margin-left: -325px;
-	background: url(../images/resizebg.png);
+	background: #FFFFFF;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border: 1px solid;
 	padding: 0;
 	
 	-webkit-transition: visibility 0s linear 0.5s,opacity 2s linear;
