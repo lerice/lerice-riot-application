@@ -268,7 +268,7 @@ h1 {
 	opacity: 0; /* Opacity will be set to 1 by jQuery */
 	bottom: 0;
 	left: 50%;
-	margin-left: -250px;
+	margin-left: -325px;
 	background: url(../images/resizebg.png);
 	padding: 0;
 	
