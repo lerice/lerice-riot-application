@@ -15,7 +15,7 @@ $(function () {
 	$('#sliderdiv').bjqs({
 		//size of slider
 		width: 800,
-		height: 420,
+		height: 425,
 		
 		//animaiton values
 		animtype: 'slide',
