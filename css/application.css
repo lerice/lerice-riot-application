@@ -196,6 +196,16 @@ h1 {
 	margin: 0;
 }
 
+.floatright {
+	float: right;
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+.textright {
+	text-align: right;
+}
+
 /* CSS for the final slide(s) */
 
 #finalslide {
