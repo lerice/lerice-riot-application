@@ -184,7 +184,7 @@ h1 {
 	float: left;
 }
 
-.websiteimage:hover {
+.websiteimage:hover, .guiimage:hover {
 	border: 1px solid;
 	border-color: #FF0033;
 }
@@ -204,6 +204,25 @@ h1 {
 
 .textright {
 	text-align: right;
+}
+
+.guiimage {
+	margin-left: 100px;
+	border: 1px solid;
+	border-color: transparent;
+}
+
+.nomargin {
+	margin-top: 0px;
+}
+
+.graphicsimage {
+	max-width: 400px;
+	max-height: 400px;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 0px;
+	float: right;
 }
 
 /* CSS for the final slide(s) */
