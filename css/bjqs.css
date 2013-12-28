@@ -21,11 +21,15 @@ ul.bjqs-controls.v-centered li a{
 	color:#000;
 	text-decoration: none;
 	margin-top:220px;
+	border: 1px solid;
+	border-color: #000000;
 }
 
 ul.bjqs-controls.v-centered li a:hover{
 	background:#000;
 	color:#fff;
+	border: 1px solid;
+	border-color: #FFFFFF;
 }
 
 ol.bjqs-markers li a{
@@ -34,11 +38,20 @@ ol.bjqs-markers li a{
 	color:#fff;
 	margin:5px;
 	text-decoration: none;
+	border: 1px solid;
+	border-color: #FFFFFF;
 }
 
-ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li.active-marker a{
+	background: #666666;
+	border: 1px solid;
+	border-color: #000000;
+}
+
 ol.bjqs-markers li a:hover{
 	background: #999;
+	border: 1px solid;
+	border-color: #000000;
 }
 
 p.bjqs-caption{

@@ -206,6 +206,15 @@ h1 {
 	text-align: right;
 }
 
+.graphicsimage {
+	max-width: 400px;
+	max-height: 400px;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 0px;
+	float: right;
+}
+
 .guiimage {
 	margin-left: 100px;
 	border: 1px solid;
@@ -214,15 +223,6 @@ h1 {
 
 .nomargin {
 	margin-top: 0px;
-}
-
-.graphicsimage {
-	max-width: 400px;
-	max-height: 400px;
-	margin-top: 5px;
-	margin-left: 10px;
-	margin-right: 0px;
-	float: right;
 }
 
 /* CSS for the final slide(s) */
