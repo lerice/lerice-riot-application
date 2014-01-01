@@ -66,6 +66,7 @@ body {
 
 .slide {
 	min-height: 600px;
+	height: 600px;
 	background: url(../images/scroll_middle.jpg) 50% 0 no-repeat;
 	position: relative;
 	color: #FFFFFF;
@@ -169,7 +170,7 @@ h1 {
 
 /* CSS for the slider page */
 
-#firstpage {
+.size14 {
 	font-size: 14px;
 	margin: 0px;
 }
