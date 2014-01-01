@@ -122,6 +122,13 @@ function puiShirt() {
 	$('#PUIshirt').css("display", "block");
 }
 
+function puiImpact() {
+	showPopUp();
+	$('#PUIimpact').css("margin-left", $('#PUIimpact').width() * -0.5);
+	$('#PUIimpact').css("margin-top", $('#PUIimpact').height() * -0.5);
+	$('#PUIimpact').css("display", "block");
+}
+
 /* Code to disable scrolling (useful when having CSS image-pop ups
 		- WITHOUT removing the scrollbar from the visible window (ie by
 		setting 'overflow: hidden' on body

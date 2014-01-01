@@ -129,6 +129,10 @@ h1 {
 	border-color: #FF0033;
 }
 
+.textright {
+	text-align: right;
+}
+
 /* CSS for the initial slide */
 
 #firstslide {
@@ -203,10 +207,6 @@ h1 {
 	margin-right: 0px;
 }
 
-.textright {
-	text-align: right;
-}
-
 .graphicsimage {
 	max-width: 400px;
 	max-height: 400px;
@@ -231,16 +231,16 @@ h1 {
 #finalslide {
 	background: url(../images/scroll_bottom.jpg) 50% 0 no-repeat;
 	color: #FFFFFF;
-	height: 500px;
+	height: 550px;
 	position: relative;
 }
 
 #finalnextdiv {
-	bottom: 250px;
+	bottom: 210px;
 }
 
 #footer {
-	margin-top: -55px;
+	margin-top: -40px;
 	height: 35px;
 	color: #999999;
 	text-align: center;
