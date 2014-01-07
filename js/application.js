@@ -10,6 +10,7 @@ $(function () {
 	
 	//Set the smooth scrolling between pages
 	$('.nextdiv').localScroll(5000);
+	$('#finalnextdiv').localScroll(1000);
 	
 	//Set the slider for 'my abilities' page
 	$('#sliderdiv').bjqs({
